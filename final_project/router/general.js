@@ -11,17 +11,17 @@ const getAllBooks = () =>
   });
 
 const getBookByISBN = async (isbn) => {
-  const response = await axios.get(`http://127.0.0.1:5001/isbn/${isbn}`);
+  const response = await axios.get(`http://127.0.0.1:5000/isbn/${isbn}`);
   return response.data;
 };
 
 const getBooksByAuthor = async (author) => {
-  const response = await axios.get(`http://127.0.0.1:5001/author/${encodeURIComponent(author)}`);
+  const response = await axios.get(`http://127.0.0.1:5000/author/${encodeURIComponent(author)}`);
   return response.data;
 };
 
 const getBooksByTitle = async (title) => {
-  const response = await axios.get(`http://127.0.0.1:5001/title/${encodeURIComponent(title)}`);
+  const response = await axios.get(`http://127.0.0.1:5000/title/${encodeURIComponent(title)}`);
   return response.data;
 };
 
